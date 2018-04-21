@@ -27,7 +27,7 @@
 
 				<section>
 					<section>
-						<h1>How To Github</h1>
+						<h1>Branching</h1>
 						<p>
 							<small>Created by <a href="https://rohitmusti.github.io/">Rohit Musti</a> and <a href="https://github.com/sarahbland7">Sarah Bland</a></small>
 						</p>
@@ -35,64 +35,74 @@
 				</section>
 
 				<section>
-					<h2>Today's Workshop</h2>
-					<ol>
-						<li> Intro to Github + set up accounts </li>
-						<li> <p class="fragment"> Basic commands (practice with the command line) </p> </li>
-						<li> <p class="fragment"> Branching (with practice)</p> </li>
-						<li> <p class="fragment"> Merging (with practice)</p> </li>
-					</ol>
+					<h2>What is Github Flow?</h2>
+					<p>
+						"GitHub Flow is a lightweight, branch-based workflow that supports teams
+						and projects where deployments are made regularly."
+					</p>
+					<p>
+						We're going to walk through the "Why?" and "How?" of this workflow.
+					</p>
 				</section>
 
 				<section>
-					<h2>What is Github?</h2>
-					<p>Back up</p>
-					<p class="fragment">Collaborate</p>
-					<p class="fragment">Share</p>
+					<h2>What is a branch? Why use one?</h2>
+					<p>
+						At any given time in a project lifecycle, you're likely going to have multiple
+						features or bugs to work on.
+					</p>
+					<p> <p class="fragment"> Some will be ready to go & some won't. </p> </p>
+					<p> <p class="fragment">
+						A "branch" is a "playground" version of the project... you get to explore
+						without worrying that you'll damage the main project.
+					</p> </p>
 				</section>
 
 				<section>
-					<h2>Set up accounts</h2>
-					<ol>
-						<li> Who needs to make a Github account? </li>
-						<li> <p class="fragment"> Go to https://github.com </p> </li>
-						<li> <p class="fragment"> Click on "Sign up" in the top right-hand corner </p> </li>
-						<li> <p class="fragment"> Enter a username, email, and password </p> </li>
-					</ol>
+					<h2>More on branches...</h2>
+					<ul>
+						<li> RULE: Anything in the master branch is deployable </li>
+						<li> NOTE: Your branch should be created off of master </li>
+						<li> TIP: Descriptive names are key! </li>
+					</ul>
 				</section>
 
 				<section>
-					<section>
-						<h2>Commands</h2>
-					</section>
-					<section>
-						<h2>Clone</h2>
-						<pre><code class="hljs" data-trim contenteditable>
-							git clone https://github.com/rohitmusti/teaching-github.git
-						</code></pre>
-						<p><small>Literally creates a "clone" of the repository on the user's local computer</small></p>
-					</section>
-					<section>
-						<h2>Add</h2>
-						<pre><code class="hljs" data-trim contenteditable>
-							git add .
-						</code></pre>
-						<pre><code class="hljs" data-trim contenteditable>
-							git add filename
-						</code></pre>
-						<p><small>Allows for fine control of which files should be added to the group to be saved</small></p>
-					</section>
-
-					<section>
-						<h2>Commit</h2>
-						<pre><code class="hljs" data-trim contenteditable>
-							git commit -a -m "Message Here"
-						</code></pre>
-						<p><small>The -a flag does the job of the previous add instruction</small></p>
-						<p><small>The -m flag allows for the version being "committed" to have a message stored with it</small></p>
-
-					</section>
+					<h2>How to use a branch?</h2>
+					<ul>
+						<li> Quick Github web interface demo... </li>
+						<li>
+							Create a new branch on commmand line
+							<pre><code class="hljs" data-trim contenteditable>
+								git checkout -b <\new local branch name>
+							</code></pre>
+						</li>
+						<li>
+							Switch to a different branch on command line
+							<pre><code class="hljs" data-trim contenteditable>
+								git checkout <\desired local branch name>
+							</code></pre>
+						</li>
+						<li>
+							Check what branches currently exist (local & remote)
+							<pre><code class="hljs" data-trim contenteditable>
+								git branch -a
+							</code></pre>
+						</li>
+					</ul>
 				</section>
+
+				<section>
+					<h2>What next?</h2>
+					<ul>
+						<li> Add commits (using descriptive messages) </li>
+						<li> <p class="fragment"> Open a pull request to initiate discussion about commits </p> </li>
+						<li> <p class="fragment"> Discuss + review code </p> </li>
+						<li> <p class="fragment"> Deploy from branch to run tests before merge </p> </li>
+						<li> <p class="fragment"> Merge code into master branch (more on this later...) </p> </li>
+					</ul>
+				</section>
+
 			</div>
 		</div>
 
